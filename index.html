@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -43,15 +44,15 @@
 
     </nav>
     <section id="profile">
-      <div class="section__pic-container">
+      <div class="section__pic-container" data-aos="fade-right" data-aos-offset="200">
         <img src="./assets/WhatsApp Image 2023-08-27 at 12.08.31 AM-removebg-preview.jpg" alt="Aashutosh profile picture" class="pro-pic">
       </div>
-      <div class="section__text">
+      <div class="section__text" data-aos="fade-left" data-aos-offset="200">
         <p class="section__text__p1">
           Hello, I'm
         </p>
         <h1 class="title">Aashutosh Kumar</h1>
-        <p class="section__text__p2">Graduate Engineer</p>
+        <p class="section__text__p2"><span id="element"></span></p>
         <div class="btn-container">
           <button class="btn btn-color-2"
           onclick="window.open('./assets/Aashutosh-Kumar (2).pdf')"
@@ -72,15 +73,15 @@
       </div>
     </section>
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+      <p class="section__text__p1" data-aos="fade-down" data-aos-offset="20">Get To Know More</p>
+      <h1 class="title" data-aos="fade-up" data-aos-offset="30">About Me</h1>
       <div class="section-container">
-        <div class="section__pic-container">
+        <div class="section__pic-container" data-aos="fade-right">
           <img src="./assets/ben-kolde-bs2Ba7t69mM-unsplash.jpg" alt="" class="about-pic">
 
         </div>
         <div class="about-details-container">
-          <div class="about-containers">
+          <div class="about-containers" data-aos="fade-down">
           <div class="details-container">
             <img src="./assets/experience.png" alt="" class="icon">
             <h3>Experience</h3>
@@ -92,7 +93,7 @@
             <p>B.Tech Bachelors Degree-IIIT Pune</p>
           </div>
         </div>
-        <div class="text-container">
+        <div class="text-container" data-aos="flip-up">
           <p>I am a passionate fresher currently pursuing a B.Tech in Electronics & Communication Engineering at the Indian Institute of Information Technology Pune. With strong proficiency in Java, React.js, HTML, CSS, Javascript, Sql.
             I am adept at building responsive web applications. Proficient in Django, Python and is well-versed in back-end development and database management. With a keen eye for UX/UI design and experience with Git & GitHub. I am also good at problem solving and a fast learner.
            I have a strong academic performance and commitment to continuous learning make me a valuable asset to any software development team.</p>
@@ -102,11 +103,11 @@
     <img src="./assets/arrow.png" alt="" class="icon arrow" onclick="location.href='./#experience'">
     </section>
     <section id="experience">
-      <p class="section__text__p1">Explore My Sills on which I have been working on</p>
-      <h1 class="title">Skills</h1>
+      <p class="section__text__p1" data-aos="fade-down" data-aos-offset="20">Explore My Sills on which I have been working on</p>
+      <h1 class="title" data-aos="fade-up" data-aos-offset="30">Skills</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container">
+          <div class="details-container"  data-aos="zoom-in" data-aos-offset="300">
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
@@ -177,7 +178,7 @@
               </article>
             </div>
           </div>
-          <div class="details-container">
+          <div class="details-container" data-aos="zoom-in" data-aos-offset="400">
             <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
@@ -226,7 +227,7 @@
               </article>
             </div>
           </div>
-          <div class="details-container">
+          <div class="details-container" data-aos="zoom-in" data-aos-offset="500">
             <h2 class="experience-sub-title">Others</h2>
             <div class="article-container">
               <article>
@@ -296,8 +297,8 @@
       />
     </section>
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <p class="section__text__p1" data-aos="fade-down" data-aos-offset="20">Browse My Recent</p>
+      <h1 class="title" data-aos="fade-up" data-aos-offset="30">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
       <div class="details-container color-container">
@@ -343,8 +344,8 @@
       />
     </section> 
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+      <p class="section__text__p1" data-aos="fade-down" data-aos-offset="30">Get in Touch</p>
+      <h1 class="title" data-aos="fade-up" data-aos-offset="30">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
@@ -379,6 +380,25 @@
     </footer>
 
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 150, // offset (in px) from the original trigger point
+  delay: 150, // values from 0 to 3000, with step 50ms
+  duration: 600, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
+
+      });
+    </script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#element', {
+        strings: ['FrontEnd Developer', 'Problem Solver','Graduate Engineer'],
+        typeSpeed: 50,
+      });
+    </script>
   </body>
 </html>
